@@ -1,0 +1,56 @@
+.maint{
+
+  color:green;
+  font-weight: bold;
+  text-align: center;
+  font-family: monospace;
+}
+#head{
+  font-size: 30px;
+  padding-top: 55px;
+}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.l2 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.l2 a:hover {
+    background-color: #111;
+}
+#active {
+    background-color: #4CAF50;
+}
+.l2 {
+    border-right: 1px solid #bbb;
+    float: left;
+}
+
+.l2:last-child {
+    border-right: none;
+}
+
+#footer
+{
+  text-align: center;
+  bottom: 0;
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: bold;
+}
