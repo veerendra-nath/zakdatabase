@@ -33,11 +33,11 @@ else
 				
             <div style = "margin:30px">
              <form action = "signupsubmit.php" method = "post">
-                  <label>Name :</label><input type = "text" name = "name" class = "box"/><br /><br />
+                  <label>Name :</label><input type = "text" name = "uname" class = "box"/><br /><br />
                   <label>Email  :</label><input type = "text" name = "Email" class = "box"/><br /><br />
                   <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
                   <label>Password   :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <input type = "submit" value = " Signup "/><br />
+                  <input type = "submit" value = " Signup " name="Signup" /><br />
                </form>
                     <div style = "font-size:11px; color:#cc0000; margin-top:10px"></div>
                <div><b>

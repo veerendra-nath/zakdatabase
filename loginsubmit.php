@@ -6,18 +6,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $uname=$_POST['username'];
     $pass=$_POST['password'];
-    $sql="SELECT * FROM `users` WHERE uname='$uname' AND password='$pass'";
+    $sql="SELECT * FROM `users` WHERE uname='$uname'";
     $result=$mysqli->query($sql);
     $count= mysqli_num_rows ($result );
     if($count==1)
     {
     $row = $result->fetch_assoc();
-    
-    $uid=$row["uid"];
-    echo $uid;
-    $_SESSION['uid'] = $uid;
-    $_SESSION['log_stat'] = TRUE;
-     header("Location:dash.php");
+    if (password_verify($pass, $row["password"]))
+    {
+        $uid=$row["uid"];
+        echo $uid;
+        $_SESSION['uid'] = $uid;
+        $_SESSION['log_stat'] = TRUE;
+        header("Location:dash.php");
+    }
+    else
+    {
+        header("Location: login.php?m=0");
+    }
     }
     if($count==0)
     {
