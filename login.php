@@ -1,10 +1,7 @@
 <?php
    include('head.php');
    include('database.php');
-   session_start();
-   if( isset( $_SESSION['log_stat'] ) ) {
-       header("Location:dash.php");
-   }
+include_once("check.php");
 if(isset($_GET['m']))
 {
     $m=$_GET['m'];

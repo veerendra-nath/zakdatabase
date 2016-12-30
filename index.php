@@ -1,8 +1,8 @@
 
 <?php
-include("check.php");
-include('head.php');
-include('database.php');
+include_once("check.php");
+include_once('head.php');
+include_once('database.php');
 ?>
 
 <pre>
@@ -34,5 +34,5 @@ include('database.php');
 
    </body>
 <?php
-include('foot.php');
+include_once('foot.php');
 ?>

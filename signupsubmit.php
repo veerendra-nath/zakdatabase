@@ -7,21 +7,22 @@ if(isset($_POST["Signup"]))
     $password=password_hash($_POST["password"], PASSWORD_BCRYPT);
     if($_POST["Email"]!=NULL)
     {
-    $email=$_POST["Email"];
+        $email=$_POST["Email"];
     }
     else
     {   
-     $email=NULL;
+        $email=NULL;
      
      }
     if($_POST["uname"]!=NULL)
     {
-    $uname=$_POST["uname"];
+        $uname=$_POST["uname"];
     }
     else
     {
-    $uname="Anamika";
+        $uname="Anamika";
     }
+   
     $sql="INSERT INTO users (uname,name,password,ugroup,Email) VALUES ('$username','$uname','$password','0','$email')";
  
     if(!$mysqli->query($sql))

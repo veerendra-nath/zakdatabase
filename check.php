@@ -1,6 +1,7 @@
 <?php
 session_start();
+include("cfunctions.php");
 if( isset( $_SESSION['log_stat'] )) {
-      header("Location:dash.php");
+      redirect("dash.php");
    }
 ?>
