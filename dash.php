@@ -5,7 +5,7 @@ include('cfunctions.php');
 
 session_start();
 if(!isset( $_SESSION['log_stat'] ) ) {
-    redirect("index.php");
+    redirect("/");
 }
 $uid=$_SESSION['uid'];
 $sql="SELECT * FROM `users` where uid='$uid'";
@@ -35,7 +35,7 @@ $row = $res->fetch_assoc();
         <p>Electronics</p></a>
     </div>
     <div class="container bimage">
-        <a href="<?php echo rawurlencode("green energy.php"); ?>"><img class="middle-img" src="genergy.png" height="200" width="200"/>
+        <a href="<?php echo rawurlencode("genergy.php"); ?>"><img class="middle-img" src="genergy.png" height="200" width="200"/>
         <p>Green Energy</p></a>
     </div>
     <div class="container bimage" >
