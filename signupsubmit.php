@@ -40,7 +40,7 @@ if(isset($_POST["Signup"]))
     $result=$mysqli->query($sql);
     $row = $result->fetch_assoc();
     $uid=$row["uid"];
-    $sql="INSERT INTO urank (uid) VALUES ('$uid')";
+    $sql="INSERT INTO urank (uid,rank) VALUES ('$uid','0')";
     $result=$mysqli->query($sql);
     
 

@@ -11,6 +11,9 @@ $uid=$_SESSION['uid'];
 $sql="SELECT * FROM `users` where uid='$uid'";
 $res=$mysqli->query($sql);
 $count= mysqli_num_rows ($res);
+$sql="SELECT * FROM urank where uid='$uid'";
+$res1=$mysqli->query($sql);
+$row1 = $res1->fetch_assoc();
 if($count==0)
 {
     if(session_destroy())
@@ -27,6 +30,9 @@ $row = $res->fetch_assoc();
 <div id="wlogout">
 <div class="userwelcome" >
     <p>Welcome <?php echo $row["Name"]; ?> </p>
+</div>
+<div id="user_count">
+    <pre>Your Total submit count:<?php echo $row1["rank"]; ?></pre>
 </div>
 <div class ="log_out_button">
         <button type="button" align ="middle" onclick="window.location.href='logout.php'">Logout</button>
@@ -60,12 +66,12 @@ $row = $res->fetch_assoc();
 		</li>		<li id="li_3" >
 		<label class="description" for="element_3">Link1 </label>
 		<div>
-			<input id="element_3" name="link1" class="element text large" type="text" maxlength="255" value=""/> 
+			<input id="element_3" name="link1" class="element text large" type="text" maxlength="2000" value=""/> 
 		</div> 
 		</li>		<li id="li_4" >
 		<label class="description" for="element_4">Link2 </label>
 		<div>
-			<input id="element_4" name="link2" class="element text large" type="text" maxlength="255" value=""/> 
+			<input id="element_4" name="link2" class="element text large" type="text" maxlength="2000" value=""/> 
 		</div> 
 		</li>
         

@@ -1,4 +1,4 @@
-<footer id="footer"><p>Copyrights 2016-2017  version: <?php 
+<footer id="footer"><p>version: <?php 
 $sql="SELECT * FROM `theme`";
 $result=$mysqli->query($sql);
 $row = $result->fetch_assoc();

@@ -27,7 +27,11 @@ else
    <body bgcolor = "#FFFFFF">
 	
       <div align = "center">
+   
          <div style = "width:300px; border: solid 1px #333333; " align = "left">
+            <div class ="home_button">
+        <button type="button" align ="middle" onclick="window.location.href='dash.php'">HOME</button>
+</div>
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
 				
             <div style = "margin:30px">
